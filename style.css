@@ -35,22 +35,20 @@ img {
 }
 
 /*partie prochainement*/
-
 aside {
   background-color: #00796B;
   border-radius: 10px;
   width: 30%;
   margin: 0 auto;
   text-align: center;
-  }
+}
 
-  .comingsoon {
-    font-size: 30px;
-    margin: 15px;
-  }
+.comingsoon {
+  font-size: 30px;
+  margin: 15px;
+}
 
-  /* pied de page maintenu à chaque page */
-
+/* pied de page maintenu à chaque page */
 footer {
   background-color: #00796B;
   display: flex;
@@ -59,11 +57,60 @@ footer {
 }
 
 .mentions, .contact {
-    font-size: 28px;
-    margin: 15px;
+  font-size: 28px;
+  margin: 15px;
+}
+
+a {
+  color: #FFC400;
+  text-decoration: none;
 }
 
 /*page 1 */
-.titre {
+main {
   color: black;
+  background-color: #ffcdd2;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+h2{
+  font-family: 'Devonshire', cursive, Verdana;
+  font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Caveat', cursive, Verdana;
+  text-align: center;
+  font-size: 34px;
+}
+
+
+.menu {
+  width: 100%;
+  margin: 30px;
+  font-family: 'Caveat', cursive, Verdana;
+  font-size: 24px;
+}
+
+.plats {
+  width: 80%;
+}
+
+.prix {
+  width: 20%;
+  font-style: bold;
+}
+
+.menufin {
+  font-family: 'Devonshire', cursive, Verdana;
+  text-align: center;
+  font-size: 38px;
 }
