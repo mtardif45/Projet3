@@ -19,6 +19,11 @@ header {
 }
 
 /*les 4 menus sur la page principale*/
+main {
+  width: 60%;
+  margin: auto;
+}
+
 .menu {
   width: 60%;
   display: flex;
@@ -67,7 +72,7 @@ a {
 }
 
 /*page 1 */
-main {
+.main1 {
   color: black;
   background-color: #ffcdd2;
   width: 50%;
@@ -88,10 +93,30 @@ h2{
 
 h3 {
   font-family: 'Caveat', cursive, Verdana;
-  text-align: center;
   font-size: 34px;
 }
 
+.subtitle {
+  text-align: center;
+  position: relative;
+}
+
+.subtitle:before {
+  content:"";
+  left: 0;
+  right: 0;
+  background: black;
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.subtitle span {
+  display: inline-block;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 1;
+}
 
 .menu {
   width: 100%;
