@@ -2,7 +2,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #FFC400;
   font-family: 'Inter', sans-serif;
 }
 
@@ -11,6 +10,7 @@ header {
   background-color: #00796B;
   font-family: 'Archivo Black', Verdana, sans-serif;
   text-align: center;
+  color: #FFC400;
 }
 
 #name {
@@ -32,11 +32,32 @@ main {
   padding: 30px;
 }
 
-img {
+.menu1, .menu2, .menu3, .menu4 {
   width: 350px;
   height: 400px;
   box-shadow: 5px 5px 5px 5px #F5F5F5;
   margin: 30px;
+}
+
+.menu1 {
+  background-color: #FBCFE7;
+  color: #191208;
+}
+
+.menu2 {
+  background-color: #FCEDF5;
+}
+
+.menu3 {
+  color: #27D4DD;
+}
+
+.menu4 {
+  color: #0B9920;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*partie prochainement*/
@@ -51,6 +72,7 @@ aside {
 .comingsoon {
   font-size: 30px;
   margin: 15px;
+  color: #FFC400;
 }
 
 /* pied de page maintenu à chaque page */
@@ -64,11 +86,7 @@ footer {
 .mentions, .contact {
   font-size: 28px;
   margin: 15px;
-}
-
-a {
   color: #FFC400;
-  text-decoration: none;
 }
 
 /*page 1 */
