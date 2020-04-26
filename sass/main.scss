@@ -2,49 +2,103 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', Verdana, sans-serif;
 }
-
 //nom du restaurant - maintenu à chaque page
 $primary-color: #00796B;
 $secondary-color: #FFC400;
+$bg-note: #ecac9b;
+$bg-chic: #fff5fe;
+$color-note: #5f2e34;
+$bg-delice: #dde4f4;
+$bg-palette:#edf8e7;
+$lightgreen: #0B9920;
+$shadow-color: #F5F5F5;
+$font-style: 'Archivo Black', Verdana, sans-serif;
+
+@mixin menu-shadow {
+  box-shadow: 5px 5px 5px 5px $shadow-color;
+}
 
 header {
   background-color: $primary-color;
-  font-family: 'Archivo Black', Verdana, sans-serif;
+  font-family: $font-style;
   text-align: center;
-  color: #FFC400;
-  --name {
+
+  .name {
     font-size: 60px;
     margin: 20px;
+    color: $secondary-color;
   }
 }
 
+.container {
+  width: 60%;
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  flex-wrap: wrap;
+
+  .menu-prev {
+    width: 350px;
+    height: 400px;
+    margin: 30px;
+    @include menu-shadow;
+
+    &__note {
+      color: $color-note;
+      font: 'Caveat', cursive, Verdana;
+      background: $bg-note;
+      height: 100%;
+            }
+          }
+        }
+
+.menu-prev__chic {
+        background: $bg-chic;
+        height: 100%;
+      }
+
+.menu-prev__delice {
+      background: $bg-delice;
+      height: 100%;
+    }
+.menu-prev__palette {
+        background: $bg-palette;
+        height: 100%;
+      }
+
+a {
+text-decoration: none;
+color:inherit;
+}
+
 //partie prochainement
-aside {
-  background-color: #00796B;
+.comingsoon {
+  background-color: $primary-color;
   border-radius: 10px;
   width: 30%;
   margin: 0 auto;
   text-align: center;
-}
 
+  span {
+    font-size: 30px;
+    margin: 15px;
+    color: $secondary-color;
+  }
+}
 //pied de page maintenu à chaque page
-footer {
+.nav {
   background-color: $primary-color;
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  .nav__link {
+    font-size: 28px;
+    margin: 15px;
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+    }
 }
-
-.comingsoon {
-  font-size: 30px;
-  margin: 15px;
-  color: $secondary-color;
-}
-
-.mentions, .contact {
-  font-size: 28px;
-  margin: 15px;
-  color: $secondary-color;
 }
