@@ -1,0 +1,14 @@
+@mixin menu-shadow {
+  box-shadow: 5px 5px 5px 5px $shadow-color;
+}
+
+@mixin menu1-layout {
+  color: $color-note;
+  background: $bg-note;
+}
+
+@mixin note-titlestyle {
+  font-family: $primary-font-note;
+  font-weight: lighter;
+  margin-top: 0;
+}

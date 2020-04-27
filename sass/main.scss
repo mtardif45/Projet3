@@ -4,25 +4,14 @@ body {
   flex-direction: column;
   font-family: 'Inter', Verdana, sans-serif;
 }
+
+@import "./utils/mixins.scss";
+@import "./utils/variables.scss";
+
 //nom du restaurant - maintenu à chaque page
-$primary-color: #00796B;
-$secondary-color: #FFC400;
-$bg-note: #ecac9b;
-$bg-chic: #fff5fe;
-$color-note: #5f2e34;
-$bg-delice: #dde4f4;
-$bg-palette:#edf8e7;
-$lightgreen: #0B9920;
-$shadow-color: #F5F5F5;
-$font-style: 'Archivo Black', Verdana, sans-serif;
-
-@mixin menu-shadow {
-  box-shadow: 5px 5px 5px 5px $shadow-color;
-}
-
 header {
   background-color: $primary-color;
-  font-family: $font-style;
+  font-family: $primary-font;
   text-align: center;
 
   .name {
@@ -44,61 +33,110 @@ header {
     height: 400px;
     margin: 30px;
     @include menu-shadow;
-
-    &__note {
-      color: $color-note;
-      font: 'Caveat', cursive, Verdana;
-      background: $bg-note;
-      height: 100%;
-            }
-          }
-        }
-
-.menu-prev__chic {
-        background: $bg-chic;
-        height: 100%;
-      }
-
-.menu-prev__delice {
-      background: $bg-delice;
-      height: 100%;
-    }
-.menu-prev__palette {
-        background: $bg-palette;
-        height: 100%;
-      }
+  }
+}
 
 a {
 text-decoration: none;
 color:inherit;
 }
 
-//partie prochainement
+// menu 1 //
+.menu-prev__note {
+  @include menu1-layout;
+  height: 100%;
+  margin: auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  padding-top: 30%;
+}
+
+.h2--menu-note {
+  @include note-titlestyle;
+}
+
+.h1--menu-note {
+  font-family: $secondary-font-note;
+  }
+
+// menu 2 //
+
+.menu-prev__chic {
+  background: $bg-chic;
+  height: 100%;
+  .h2--menu-chic {
+    font-family: 'Croissant One', cursive;
+  .h1--menu-chic {
+    font-family: 'Roboto Slab', serif, Verdana;}
+  }
+}
+
+.menu-prev__delice {
+  background: $bg-delice;
+  height: 100%;
+    }
+.menu-prev__palette {
+  background: $bg-palette;
+  height: 100%;
+}
+
+//partie prochainement //
 .comingsoon {
   background-color: $primary-color;
   border-radius: 10px;
   width: 30%;
   margin: 0 auto;
   text-align: center;
-
   span {
     font-size: 30px;
     margin: 15px;
     color: $secondary-color;
   }
 }
-//pied de page maintenu à chaque page
+//pied de page maintenu à chaque page //
 .nav {
   background-color: $primary-color;
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
   .nav__link {
+    color: $secondary-color;
     font-size: 28px;
     margin: 15px;
-    a {
-      text-decoration: none;
-      color: $secondary-color;
-    }
+  }
 }
+
+
+  //page 1
+.note--header {
+    text-align: center;
 }
+
+  .note__title {
+    text-align: center;
+    @include note-titlestyle;
+    font-size: 40px; }
+
+  .note-menu {
+    @include menu1-layout;
+    @include menu-shadow;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .note__logo {
+    width: 15%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  ul {
+    list-style: none;
+
+  }
