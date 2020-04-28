@@ -117,26 +117,35 @@ img {
     text-align: center;
 }
 
-  .note__title {
+.note__title {
     text-align: center;
     @include note-titlestyle;
     font-size: 40px; }
 
-  .note-menu {
+.note-menu {
     @include menu1-layout;
     @include menu-shadow;
     width: 60%;
     margin: 0 auto;
   }
 
-  .note__logo {
+.note__logo {
     width: 15%;
     height: auto;
     display: block;
     margin: auto;
+    padding-top: 30px;
   }
 
-  ul {
+ul {
     list-style: none;
+}
 
-  }
+.note__final--logo {
+  width: 5%;
+}
+
+.note__final--titre {
+  @include note-titlestyle;
+  font-size: 34px;
+}
