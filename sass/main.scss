@@ -13,7 +13,6 @@ header {
   background-color: $primary-color;
   font-family: $primary-font;
   text-align: center;
-
   .name {
     font-size: 60px;
     margin: 20px;
@@ -27,10 +26,9 @@ header {
   margin: auto;
   padding: 30px;
   flex-wrap: wrap;
-
   .menu-prev {
     width: 350px;
-    height: 400px;
+    height: 450px;
     margin: 30px;
     @include menu-shadow;
   }
@@ -45,9 +43,12 @@ color:inherit;
 .menu-prev__note {
   @include menu1-layout;
   height: 100%;
-  margin: auto;
-  font-size: 30px;
+  margin:auto;
   text-align: center;
+  font-size: 26px;
+  .h2__menu-note {
+    @include note-titlestyle;
+  }
 }
 
 img {
@@ -56,34 +57,17 @@ img {
   padding-top: 30%;
 }
 
-.h2--menu-note {
-  @include note-titlestyle;
-}
 
-.h1--menu-note {
+
+.h1__menu-note {
   font-family: $secondary-font-note;
   }
 
-// menu 2 //
-
-.menu-prev__chic {
-  background: $bg-chic;
-  height: 100%;
-  .h2--menu-chic {
-    font-family: 'Croissant One', cursive;
-  .h1--menu-chic {
-    font-family: 'Roboto Slab', serif, Verdana;}
-  }
-}
-
+  //menu 3
 .menu-prev__delice {
   background: $bg-delice;
-  height: 100%;
+  @include menu-preview-layout;
     }
-.menu-prev__palette {
-  background: $bg-palette;
-  height: 100%;
-}
 
 //partie prochainement //
 .comingsoon {
@@ -111,41 +95,202 @@ img {
   }
 }
 
-
-  //page 1
-.note--header {
+  // menu 1 page 1
+.note__header {
     text-align: center;
 }
 
-.note__title {
+.note__titre {
+    font-size: 30px;
     text-align: center;
-    @include note-titlestyle;
-    font-size: 40px; }
+    @include note-titlestyle;}
 
-.note-menu {
+.note__main--menu {
     @include menu1-layout;
     @include menu-shadow;
-    width: 60%;
-    margin: 0 auto;
+    @include page-display;
   }
 
 .note__logo {
-    width: 15%;
-    height: auto;
+    width: 60px;
+    height: 70px;
     display: block;
     margin: auto;
     padding-top: 30px;
   }
 
-ul {
-    list-style: none;
+//les plats
+.note__main--content {
+  text-align: center;
+  padding-right: 40px;
+  font-family: $secondary-font-note;
+  .note__subtitle {
+    font-size: 38px;
+    justify-content: space-between;}
+  }
+
+.note__liste {
+      @include list-style;
+      .plats, .prix {
+        @include list-margin;
+      }
+  }
+
+.prix {
+  font-weight: bold;
 }
 
-.note__final--logo {
-  width: 5%;
+//bas de menu1
+.note__final {
+  display: flex;
+  justify-content: center;
+  .note__final--titre {
+    @include note-titlestyle;
+    font-size: 34px;
+    .note__final--logo {
+      vertical-align: middle;
+      padding: 0;
+      width: 40px;
+      height: 50px;}
+  }
 }
 
-.note__final--titre {
-  @include note-titlestyle;
+//menu 2 -  preview
+.menu-prev__chic {
+  background-color: $bg-chic;
+  @include menu-preview-layout;
+  .h2__menu-chic {
+    @include chic-title-degrade;
+    font-size: 26px;}
+}
+.h1__menu-chic {
+    font-family: $primary-font-chic;
+    color: $mustard;
+    font-size: 40px;
+    text-align: center;
+  }
+//menu 2 - page 2
+  .chic__main--menu {
+      @include menu-shadow;
+      @include page-display
+      background: $bg-chic;
+      font-family: $primary-font-chic;
+        .chic__main--content {
+        padding-right: 40px;}
+      }
+
+.chic__title {
+        text-align: center;
+        @include chic-title-degrade;
+        font-size: 32px;
+      }
+.chic__subtitle {
+        text-align: center;
+        font-size: 24px;
+      }
+
+.chic__starter {
+  color: $mustard;
+}
+.chic__maincourse {
+  color: $purple;
+}
+
+.chic__dessert {
+  color: $strongpurple;
+}
+.chic__liste {
+  @include list-style;
+  .plats, .prix {
+      @include list-margin;
+    }
+  }
+
+//menu 3 - menu-preview
+.menu-prev__delice {
+  background-color: $bg-delice;
+  @include menu-preview-layout;
+  .h2__menu-delice {
+    @include delice-title-degrade;
+    font-size: 36px;}
+}
+.h1__menu-delice {
+  font-family:$primary-font-delice;
+  color: $medium-blue;
   font-size: 34px;
+  text-align: center;
+  }
+
+//menu 3 page 3
+.delice__main--menu {
+    @include menu-shadow;
+    @include page-display
+    background-color: $bg-delice;
+      .delice__main--content {
+        padding-right: 50px;
+        font-family: $primary-font-delice;
+      }
+    }
+.delice__subtitle {
+  text-align: center;
+}
+
+.delice__title {
+      @include delice-title-degrade;
+      text-align: center;
+      font-size: 44px;
+}
+
+.delice__liste {
+  @include list-style;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 18px;
+  .plats, .prix {
+      @include list-margin;
+    }
+}
+// menu 4 - preview
+.menu-prev__palette {
+  @include menu-preview-layout;
+  .h2__menu-palette {
+    font-size: 34px;
+    @include palette-title-degrade;
+  }
+}
+.h1__menu-palette {
+  font-family:$secondary-font-palette;
+  color: $dark-green;
+  font-size: 30px;
+  text-align: center;
+  }
+
+// menu 4 -page 4
+.palette__main--menu {
+    @include menu-shadow;
+    @include page-display
+      .palette__main--content {
+        padding-right: 50px;
+        font-family: $primary-font-palette;
+  }
+    }
+.palette__subtitle {
+  text-align: center;
+}
+
+.palette__title {
+      @include palette-title-degrade;
+      text-align: center;
+      font-size: 48px;
+}
+
+.palette__liste {
+  @include list-style;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  .plats, .prix {
+      @include list-margin;
+    }
 }

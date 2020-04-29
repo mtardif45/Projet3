@@ -1,83 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./sass/main.min.css">
-  <script src="https://kit.fontawesome.com/91da31eed1.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
   <title> Oh My Food - Le Délice des Papilles </title>
 </head>
 
 <body>
   <header>
-    <div id="name"> ohmyfood </div>
+    <div class="name"> ohmyfood </div>
   </header>
 
-  <a href="./index.html" >
-  Page d'accueil </a>
+  <a href="./index.html" > Page d'accueil </a>
 
-  <h1>Le délice des papilles </h1>
-  <div class="main1">
-    <h2>Le délice des papilles </h2>
-    <h3 class="subtitle"> <span> Pour bien commencer </span></h3>
-    <div class="menu">
-      <div class="plats">
-        <p>Tartare de thon assaisonné au yuzu</p>
-      </div>
-      <div class="prix">
-        <p> 55€ </p>
-      </div>
-      <div class="plats">
-        <p>Bouchée de homard croustillant et sa farandole de petits légumes</p>
-      </div>
-      <div class="prix"> 89€ </div>
-      <div class="plats">
-        <p>Velouté de cèpes aux truffes</p>
-      </div>
-      <div class="prix"> 56€</div>
+<main>
+  <section class="delice__main--menu">
+    <h1 class="delice__title">Le délice des papilles </h1>
 
+  <section class="delice__main--content">
+    <h2 class="delice__subtitle">Pour bien commencer</h2>
+     <ul>
+      <li class="delice__liste">
+        <p class="plats">Tartare de thon assaisonné au yuzu</p>
+        <p class="prix">55€</p>
+      </li>
+      <li class="delice__liste">
+        <p class="plats">Bouchée de homard croustillant et sa farandole de petits légumes</p>
+        <p class="prix"> 89€ </p>
+      </li>
+      <li class="delice__liste">
+        <p class="plats">Velouté de cèpes aux truffes</p>
+        <p class="prix"> 56€</p>
+      </li>
+    </ul>
 
-      <h3 class="subtitle"><span>Pour bien continuer</span></h3>
-      <div class="menu">
-        <div class="plats">
-          <p>Poulet rôti aux herbes de provence et sa crème de truffe</p>
-        </div>
-        <div class="prix"> 110€</div>
-        <div class="plats">
-          <p>Langouste rôtie et ses légumes de saison</p>
-        </div>
-        <div class="prix">225€</div>
-        <div class="plats">
-          <p>Côte de boeuf angus et sa purée de panais</p>
-        </div>
-        <div class="prix">115€</div>
-      </div>
+      <h2 class="delice__subtitle">Pour bien continuer</h2>
+      <ul>
+        <li class="delice__liste">
+          <p class="plats">Poulet rôti aux herbes de provence et sa crème de truffe</p>
+          <p class="prix"> 110€</p>
+        </li>
+        <li class="delice__liste">
+        <p class="plats">Langouste rôtie et ses légumes de saison</p>
+        <p class="prix">225€</p></li>
+        <li class="delice__liste">
+          <p class="plats">Côte de boeuf angus et sa purée de panais</p>
+          <p class="prix">115€</p>
+      </li>
+    </ul>
 
-      <h3 class="subtitle"><span>Pour bien terminer</span></h3>
-      <div class="menu">
-        <div class="plats">
-          <p>Farandole de desserts du chef</p>
-        </div>
-        <div class="prix"> 55€</div>
-        <div class="plats">
-          <p>Crème brûlée revisitée</p>
-        </div>
-        <div class="prix"> 60€</div>
-        <div class="plats">
-          <p>Tiramisu à la noisette</p>
-        </div>
-        <div class="prix"> 55€</div>
-      </div>
-    </div>
+      <h2 class="delice__subtitle">Pour bien terminer</h2>
+      <ul>
+        <li class="delice__liste">
+          <p class="plats">Farandole de desserts du chef</p>
+          <p class="prix"> 55€</p>
+        </li>
+        <li class="delice__liste">
+          <p class="plats">Crème brûlée revisitée</p>
+          <p class="prix"> 60€</p>
+        </li>
+        <li class="delice__liste">
+          <p class="plats">Tiramisu à la noisette</p>
+          <p class="prix"> 55€</p>
+        </li>
+      </ul>
 
-    <footer>
-      <p class="mentions"><a href="mentions.html" title="Mentions"> Mentions légales</a></p>
-      <p class="contact"><a href="contact.html" title="Contact"> Contactez-nous </a></p>
-    </footer>
-
+  </section>
+</main>
+<footer>
+  <nav class="nav">
+    <p class="nav__link"> <a href="./mentions.html" title="Mentions"> Mentions légales</a></p>
+    <p class="nav__link"> <a href="mailto: contact@ohmyfood.com" title="Contact"> Contactez-nous </a></p>
+  </nav>
+</footer>
 </body>
 
 </html>
