@@ -38,6 +38,8 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
 }
 
 @mixin list-margin {

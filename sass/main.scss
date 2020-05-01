@@ -84,7 +84,18 @@ color:inherit;
     color: $secondary-color;
     font-size: 28px;
     margin: 15px;
+&:hover{
+    animation: wiggle 300ms infinite;
   }
+}
+}
+
+@keyframes wiggle {
+  0% {transform:rotate(0deg);}
+  25% {transform:rotate(-5deg)}
+  50% {transform:rotate(5deg)}
+  75% {transform:rotate(0deg)}
+  100% {transform:rotate(0deg)}
 }
 
 // menu 1 //
@@ -121,26 +132,23 @@ img {
   // menu 1 page 1
 .note__header {
     text-align: center;
-}
-
-.note__titre {
-    font-size: 30px;
-    text-align: center;
-    @include note-titlestyle;}
+  }
 
 .note__main--menu {
-    @include menu1-layout;
-    @include menu-shadow;
-    @include page-display;
-  }
-
-.note__logo {
-    width: 60px;
-    height: 70px;
-    display: block;
-    margin: auto;
-    padding-top: 30px;
-  }
+      @include menu1-layout;
+      @include menu-shadow;
+      @include page-display;
+      .note__titre {
+        font-size: 30px;
+        text-align: center;
+        @include note-titlestyle;
+        .note__logo {
+          width: 60px;
+          height: 70px;
+          padding-top: 30px;
+        }
+      }
+}
 
 //les plats
 .note__main--content {
@@ -157,11 +165,11 @@ img {
       .plats, .prix {
         @include list-margin;
       }
-  }
+    }
 
 .prix {
   font-weight: bold;
-}
+        }
 
 //bas de menu1
 .note__final {
@@ -210,26 +218,24 @@ img {
       background: $bg-chic;
       font-family: $primary-font-chic;
         .chic__main--content {
-        padding-right: 40px;}
-      }
+          padding-right: 40px;}
+}
 
 .chic__title {
-        text-align: center;
-        @include chic-title-degrade;
-        font-size: 32px;
-      }
+  text-align: center;
+  @include chic-title-degrade;
+  font-size: 32px;}
+
 .chic__subtitle {
         text-align: center;
         font-size: 24px;
       }
-
 .chic__starter {
   color: $mustard;
 }
 .chic__maincourse {
   color: $purple;
 }
-
 .chic__dessert {
   color: $strongpurple;
 }
@@ -275,10 +281,10 @@ img {
       .delice__main--content {
         padding-right: 50px;
         font-family: $primary-font-delice;
-      }
-    }
-.delice__subtitle {
-  text-align: center;
+        .delice__subtitle {
+          text-align: center;
+}
+}
 }
 
 .delice__title {
@@ -289,8 +295,6 @@ img {
 
 .delice__liste {
   @include list-style;
-  width: 70%;
-  margin: 0 auto;
   font-size: 18px;
   .plats, .prix {
       @include list-margin;
@@ -329,10 +333,10 @@ img {
       .palette__main--content {
         padding-right: 50px;
         font-family: $primary-font-palette;
-  }
-    }
-.palette__subtitle {
-  text-align: center;
+        .palette__subtitle {
+          text-align: center;
+        }
+      }
 }
 
 .palette__title {
@@ -343,8 +347,6 @@ img {
 
 .palette__liste {
   @include list-style;
-  width: 70%;
-  margin: 0 auto;
   font-size: 18px;
   font-weight: bold;
   .plats, .prix {
