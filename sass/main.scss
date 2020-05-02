@@ -336,10 +336,27 @@ img {
       .delice__main--content {
         padding-right: 50px;
         font-family: $primary-font-delice;
-        .delice__subtitle {
-          text-align: center;
 }
 }
+.delice__main--subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left:20px;
+  padding-right:20px;
+  font-size: 14px;
+  img {
+    height: 8px;
+    width: 250px;
+    padding-top: 30px;
+    }
+  }
+
+.delice__leftline {
+  padding-right: 20px;
+}
+.delice__rightline {
+  padding-left: 20px;
 }
 
 .delice__title {
@@ -388,11 +405,34 @@ img {
       .palette__main--content {
         padding-right: 50px;
         font-family: $primary-font-palette;
-        .palette__subtitle {
-          text-align: center;
         }
-      }
 }
+
+.palette__main--subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left:20px;
+  padding-right:20px;
+  font-size: 14px;
+  img {
+    height: 8px;
+    width: 250px;
+    padding-top: 30px;
+}
+}
+
+.palette__subtitle--starter {
+  padding-left: 40px;
+  padding-right: 40px;
+      }
+
+.palette__leftline {
+    padding-right: 25px;
+  }
+.palette__rightline {
+    padding-left: 25px;
+  }
 
 .palette__title {
       @include palette-title-degrade;
