@@ -166,20 +166,32 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 60px;
     padding-right: 40px;
+    font-size: 14px;
     img {
       height: 8px;
-      width: 180px;
+      width: 160px;
       padding-top: 30px;
   }
 }
 
-.note__subtitle {
-    font-size: 20px;
-    padding-left: 20px;
+.note__subtitle--starter {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.note__subtitle--maincourse {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+.note__subtitle--dessert {
+    padding-left: 10px;
     padding-right: 20px;
   }
+
+
+
+
 
 .note__liste {
       @include list-style;
