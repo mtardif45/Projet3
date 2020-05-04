@@ -159,8 +159,6 @@ img {
 
 //les plats
 .note__main--content {
-  text-align: center;
-  padding-right: 40px;
   font-family: $secondary-font-note;
 }
 
@@ -178,10 +176,30 @@ img {
   }
 }
 
+// ANIMATION EN COURS //////////////////////////////////////////////////////
 .note__subtitle--starter {
   padding-left: 70px;
   padding-right: 70px;
+  &:hover, &::after {
+    cursor: pointer;
+    transition: transform 4000ms ease-in-out;
+    transform: translateX(100%);
+    background-color: black;
+  }
+  &::after {
+    content: '';
+    transform: translateX(0);
+    height: 1px;
+    background-color: transparent;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom:0;
+  }
 }
+
+//////////////////////////////////////////////////////////////////////
+
 .note__subtitle--maincourse {
     padding-left: 30px;
     padding-right: 50px;
