@@ -1,0 +1,69 @@
+@mixin menu-shadow {
+  box-shadow: 5px 5px 5px 5px $shadow-color;
+}
+
+@mixin menu1-layout {
+  color: $color-note;
+  background: $bg-note;
+}
+
+@mixin link-menu {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+@mixin menu-preview-layout {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin page-display {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+@mixin note-titlestyle {
+  font-family: $primary-font-note;
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+@mixin list-style {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@mixin list-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@mixin chic-title-degrade {
+  font-family: $secondary-font-chic;
+  background: linear-gradient(to right, $mustard 0%, $strongpurple 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin delice-title-degrade {
+  font-family: $secondary-font-delice;
+  background: linear-gradient(to right, $dark-blue 0%, $medium-blue 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin palette-title-degrade {
+    font-family: $secondary-font-palette;
+    background: linear-gradient(to right, $dark-green 0%, $lightgreen 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
