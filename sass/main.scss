@@ -1,3 +1,7 @@
+@import "./base/_typography.scss";
+@import "./utils/_mixins.scss";
+@import "./utils/_variables.scss";
+
 body {
   width: 100%;
   display: flex;
@@ -6,28 +10,9 @@ body {
   font-family: 'Inter', Verdana, sans-serif;
 }
 
-@import "./utils/mixins.scss";
-@import "./utils/variables.scss";
-
-//nom du restaurant - maintenu à chaque page
-.btn--accueil{
-  background-color: $primary-color;
-  color: $secondary-color;
-  margin-top: 10px;
-  width: 8%;
-  padding: 3px 3px;
-  text-align: center;
-  border-radius: 5rem;
-  opacity: 1;
-  transform: scale(1);
-  transition: transform 400ms;
-  @include tablet-only {
-    width: 15%;
-  }
-  &:hover {
-    opacity: 0.8;
-    transform:scale(1.10);
-  }
+a {
+text-decoration: none;
+color:inherit;
 }
 
 header {
@@ -56,11 +41,6 @@ header {
   }
 }
 
-a {
-text-decoration: none;
-color:inherit;
-}
-
 //partie prochainement //
 .comingsoon {
   background-color: $primary-color;
@@ -69,7 +49,7 @@ color:inherit;
   text-align: center;
   width: 28%;
   @include tablet-only {
-    width: 40%;
+  width: 40%;
   }
     span {
     color: $secondary-color;
@@ -105,7 +85,7 @@ color:inherit;
     color: $secondary-color;
     margin: 10px;
     font-size: 22px;
-&:hover{
+    &:hover{
     animation: wiggle 300ms infinite;
   }
 }
@@ -113,10 +93,10 @@ color:inherit;
 
 @keyframes wiggle {
   0% {transform:rotate(0deg);}
-  25% {transform:rotate(-5deg)}
-  50% {transform:rotate(5deg)}
-  75% {transform:rotate(0deg)}
-  100% {transform:rotate(0deg)}
+  25% {transform:rotate(-3deg);}
+  50% {transform:rotate(3deg);}
+  75% {transform:rotate(-3deg);}
+  100% {transform:rotate(0deg);}
 }
 
 // menu 1 //
@@ -137,37 +117,19 @@ color:inherit;
       }
   }
 }
-
-.h2__menu-note {
-    @include note-titlestyle;
-  }
-
-img {
-  width: 60px;
-  height: 70px;
-  padding-top: 8rem;
-}
-
-.h1__menu-note {
-  font-family: $secondary-font-note;
-  }
-
   // menu 1 page 1
-.note__header {
-    text-align: center;
-  }
-
+.h1__menu-note {
+    font-family: $secondary-font-note;
+    }
+.h2__menu-note {
+      @include note-titlestyle;
+    }
 .note__main--menu {
       @include menu1-layout;
       @include menu-shadow;
-      @include page-display;
-      @include tablet-only {
-        width: 100%;
-        padding: 0;
-      }
       .note__titre {
-        font-size: 30px;
         text-align: center;
+        font-size: 32px;
         @include note-titlestyle;
         &__logo {
           width: 60px;
@@ -182,62 +144,59 @@ img {
   font-family: $secondary-font-note;
 }
 
-.note__main--subtitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 14px;
-    img {
-      height: 8px;
-      width: 160px;
-      padding-top: 30px;
-  }
-}
-
 // ANIMATION EN COURS //////////////////////////////////////////////////////
 .note__subtitle--starter {
   padding-left: 70px;
   padding-right: 70px;
-  &:hover, &::after {
+  background: linear-gradient(to top, #3d1319 0%, #3d1319 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 1000ms;
+  &:hover {
     cursor: pointer;
-    transition: transform 4000ms ease-in-out;
-    transform: translateX(100%);
-    background-color: black;
-  }
-  &::after {
-    content: '';
-    transform: translateX(0);
-    height: 1px;
-    background-color: transparent;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom:0;
-  }
+    background-size: 100% 100%;
+    }
 }
 
-//////////////////////////////////////////////////////////////////////
+img {
+  width: 60px;
+  height: 60px;
+  padding-top: 6rem;
+}
+
+.note__header {
+    text-align: center;
+  }
+
+.note__main--subtitle {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 24px;
+      img {
+        height: 8px;
+        width: 350px;
+        padding-top: 50px;
+    }
+  }
+.prix {
+    font-weight: bold;
+}
 
 .note__subtitle--maincourse {
-    padding-left: 30px;
-    padding-right: 50px;
-  }
+      padding-left: 30px;
+      padding-right: 50px;
+    }
 .note__subtitle--dessert {
-    padding-left: 10px;
-    padding-right: 20px;
-  }
+      padding-left: 10px;
+      padding-right: 20px;
+    }
 
 .note__liste {
       @include list-style;
+      font-size: 20px;
       .plats, .prix {
         @include list-margin;
       }
     }
-
-.prix {
-  font-weight: bold;
-        }
-
 //bas de menu1
 .note__final {
   display: flex;
@@ -281,9 +240,19 @@ img {
     text-align: center;
   }
 //menu 2 - page 2
+.chic__main--subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 14px;
+  img {
+    height: 8px;
+    width: 350px;
+    padding-top: 30px;
+  }
+}
   .chic__main--menu {
       @include menu-shadow;
-      @include page-display
       background: $bg-chic;
       font-family: $primary-font-chic;
       @include tablet-only {
@@ -297,17 +266,6 @@ img {
   @include chic-title-degrade;
   font-size: 32px;}
 
-.chic__main--subtitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 14px;
-  img {
-    height: 8px;
-    width: 250px;
-    padding-top: 30px;
-  }
-}
 
 .chic__starter {
   color: $mustard;
@@ -373,18 +331,6 @@ img {
   }
 
 //menu 3 page 3
-.delice__main--menu {
-    @include menu-shadow;
-    @include page-display
-    background-color: $bg-delice;
-    @include tablet-only {
-      width: 100%;
-      padding: 0;
-    }
-      .delice__main--content {
-        font-family: $primary-font-delice;
-}
-}
 .delice__main--subtitle {
   display: flex;
   flex-direction: row;
@@ -392,7 +338,7 @@ img {
   font-size: 14px;
   img {
     height: 8px;
-    width: 250px;
+    width: 350px;
     padding-top: 30px;
     }
   }
@@ -402,6 +348,18 @@ img {
 }
 .delice__rightline {
   padding-left: 20px;
+}
+
+.delice__main--menu {
+    @include menu-shadow;
+    background-color: $bg-delice;
+    @include tablet-only {
+      width: 100%;
+      padding: 0;
+    }
+      .delice__main--content {
+        font-family: $primary-font-delice;
+}
 }
 
 .delice__title {
@@ -446,18 +404,6 @@ img {
   }
 
 // menu 4 -page 4
-.palette__main--menu {
-    @include menu-shadow;
-    @include page-display;
-    @include tablet-only {
-      width: 100%;
-      padding: 0;
-    }
-      .palette__main--content {
-        font-family: $primary-font-palette;
-        }
-}
-
 .palette__main--subtitle {
   display: flex;
   flex-direction: row;
@@ -466,7 +412,7 @@ img {
   font-size: 14px;
   img {
     height: 8px;
-    width: 250px;
+    width: 350px;
     padding-top: 30px;
 }
 }
@@ -482,6 +428,17 @@ img {
 .palette__rightline {
     padding-left: 25px;
   }
+
+.palette__main--menu {
+    @include menu-shadow;
+    @include tablet-only {
+      width: 100%;
+      padding: 0;
+    }
+      .palette__main--content {
+        font-family: $primary-font-palette;
+        }
+}
 
 .palette__title {
       @include palette-title-degrade;
