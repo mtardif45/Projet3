@@ -107,6 +107,7 @@ header {
   text-align: center;
   font-size: 26px;
   transform: scale(1);
+  color: $color-note;
   transition: transform 300ms ease-in-out;
   opacity: 1;
       .link__note {
@@ -144,18 +145,6 @@ header {
   font-family: $secondary-font-note;
 }
 
-// ANIMATION EN COURS //////////////////////////////////////////////////////
-.note__subtitle--starter {
-  padding-left: 70px;
-  padding-right: 70px;
-  background: linear-gradient(to top, #3d1319 0%, #3d1319 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
-  transition: background-size 1000ms;
-  &:hover {
-    cursor: pointer;
-    background-size: 100% 100%;
-    }
-}
-
 img {
   width: 60px;
   height: 60px;
@@ -177,18 +166,42 @@ img {
         padding-top: 50px;
     }
   }
+
+.note__subtitle--starter {
+        padding-left: 50px;
+        padding-right: 50px;
+        background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+        transition: background-size 1000ms;
+    &:hover {
+      cursor: pointer;
+      background-size: 100% 100%;
+      }
+  }
+
+.note__subtitle--maincourse {
+        padding-left: 50px;
+        padding-right: 50px;
+        background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+        transition: background-size 1000ms;
+        &:hover {
+          cursor: pointer;
+          background-size: 100% 100%;
+          }
+      }
+.note__subtitle--dessert {
+        padding-left: 50px;
+        padding-right: 50px;
+        background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+        transition: background-size 1000ms;
+        &:hover {
+          cursor: pointer;
+          background-size: 100% 100%;
+          }
+      }
+
 .prix {
     font-weight: bold;
 }
-
-.note__subtitle--maincourse {
-      padding-left: 30px;
-      padding-right: 50px;
-    }
-.note__subtitle--dessert {
-      padding-left: 10px;
-      padding-right: 20px;
-    }
 
 .note__liste {
       @include list-style;
