@@ -8,6 +8,9 @@ body {
   flex-direction: column;
   margin: 0;
   font-family: 'Inter', Verdana, sans-serif;
+  @include mobile-only {
+    align-items: center;
+  }
 }
 
 a {
@@ -19,10 +22,17 @@ header {
   background-color: $primary-color;
   font-family: $primary-font;
   text-align: center;
+  transform: scale(1);
+  opacity: 1;
   .name {
     font-size: 60px;
     margin: 20px;
     color: $secondary-color;
+    &:hover {
+      transition: transform 3000ms linear;
+      transform: scale(1.15);
+      opacity: 0.9;
+    }
   }
 }
 
@@ -49,13 +59,18 @@ header {
   text-align: center;
   width: 28%;
   @include tablet-only {
-  width: 40%;
+  width: 40%;}
+  @include mobile-only{
+    width: 60%;
   }
     span {
     color: $secondary-color;
     z-index: 1;
     position: relative;
     font-size: 28px;
+    @include mobile-only {
+      font-size: 18px;
+    }
         &::after {
         display: inline-block;
         padding-left: 0.5rem;
@@ -85,6 +100,9 @@ header {
     color: $secondary-color;
     margin: 10px;
     font-size: 22px;
+    @include mobile-only {
+      font-size: 16px;
+    }
     &:hover{
     animation: wiggle 300ms infinite;
   }
@@ -119,11 +137,13 @@ header {
   }
 }
   // menu 1 page 1
-.h1__menu-note {
-    font-family: $secondary-font-note;
-    }
 .h2__menu-note {
+    font-family: $secondary-font-note;
+    font-size: 26px;
+    }
+.h1__menu-note {
       @include note-titlestyle;
+      font-size: 30px;
     }
 .note__main--menu {
       @include menu1-layout;
@@ -143,7 +163,7 @@ header {
 //les plats
 .note__main--content {
   font-family: $secondary-font-note;
-}
+  }
 
 img {
   width: 60px;
@@ -160,10 +180,17 @@ img {
       flex-direction: row;
       justify-content: center;
       font-size: 24px;
+      @include mobile-only {
+        font-size: 18px;}
       img {
         height: 8px;
         width: 350px;
         padding-top: 50px;
+        @include mobile-only {
+          width: 15%;
+          height: 5px;
+          padding-top: 40px;
+        }
     }
   }
 
@@ -172,6 +199,10 @@ img {
         padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
+        @include mobile-only {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
     &:hover {
       cursor: pointer;
       background-size: 100% 100%;
@@ -183,6 +214,10 @@ img {
         padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
+        @include mobile-only {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
         &:hover {
           cursor: pointer;
           background-size: 100% 100%;
@@ -193,6 +228,10 @@ img {
         padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
+        @include mobile-only {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
         &:hover {
           cursor: pointer;
           background-size: 100% 100%;
@@ -202,14 +241,23 @@ img {
 .prix {
     font-weight: bold;
 }
+.liste__menu{
+padding: 0;
+}
 
 .note__liste {
       @include list-style;
       font-size: 20px;
+      @include mobile-only {
+        display: block;
+        text-align: center;
+        padding-right: 0;
+      }
       .plats, .prix {
         @include list-margin;
       }
     }
+
 //bas de menu1
 .note__final {
   display: flex;
@@ -241,12 +289,12 @@ img {
 }
 }
 
-.h2__menu-chic {
+.h1__menu-chic {
     @include chic-title-degrade;
     font-size: 26px;
     margin-top: 10rem;
 }
-.h1__menu-chic {
+.h2__menu-chic {
     font-family: $primary-font-chic;
     color: $mustard;
     font-size: 40px;
@@ -258,13 +306,22 @@ img {
   flex-direction: row;
   justify-content: center;
   font-size: 14px;
-  img {
+  @include mobile-only {
+    font-size: 12px;
+  text-align: center;}
+    img {
     height: 8px;
     width: 350px;
     padding-top: 30px;
+    @include mobile-only {
+      width: 15%;
+      height: 3px;
+      padding: 24px 0 0 0;
+    }
   }
 }
-  .chic__main--menu {
+
+.chic__main--menu {
       @include menu-shadow;
       background: $bg-chic;
       font-family: $primary-font-chic;
@@ -277,43 +334,79 @@ img {
 .chic__title {
   text-align: center;
   @include chic-title-degrade;
-  font-size: 32px;}
-
+  font-size: 32px;
+  @include mobile-only {
+    font-size: 24px;
+  }
+}
 
 .chic__starter {
   color: $mustard;
-  .chic__leftline--starter {
-    padding-right: 15px;}
-  .chic__rightline--starter {
+  .chic__subtitle {
+    background: linear-gradient(to top, $mustard 0%, $mustard 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+    transition: background-size 1000ms;
+      &:hover {
+        cursor: pointer;
+        background-size: 100% 100%;
+        }
+  }
+}
+
+.chic__leftline--starter {
+  padding-right: 15px;
+}
+.chic__rightline--starter {
       padding-left: 20px;
     }
-  }
 
 .chic__maincourse {
   color: $purple;
-  .chic__leftline--maincourse {
+  .chic__subtitle {
+    background: linear-gradient(to top, $purple 0%, $purple 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+    transition: background-size 1000ms;
+      &:hover {
+        cursor: pointer;
+        background-size: 100% 100%;
+        }
+      }
+    }
+.chic__leftline--maincourse {
     padding-right: 40px;
   }
-  .chic__rightline--maincourse{
+.chic__rightline--maincourse{
     padding-left: 60px;
   }
-}
+
 .chic__dessert {
   color: $strongpurple;
-  .chic__leftline--dessert {
+  .chic__subtitle {
+    background: linear-gradient(to top, $strongpurple 0%, $strongpurple 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+    transition: background-size 1000ms;
+      &:hover {
+        cursor: pointer;
+        background-size: 100% 100%;
+        }
+      }
+    }
+
+.chic__leftline--dessert {
     padding-right: 25px;
   }
   .chic__rightline--dessert {
     padding-left: 25px;
   }
-}
+
 .chic__liste {
   @include list-style;
+  @include mobile-only {
+    display: block;
+    text-align: center;
+    padding-right: 0;
   .plats, .prix {
       @include list-margin;
     }
   }
-
+}
 //menu 3 - menu-preview
 .menu-prev__delice {
   background-color: $bg-delice;
@@ -330,13 +423,13 @@ img {
   }
 }
 
-.h2__menu-delice {
+.h1__menu-delice {
     @include delice-title-degrade;
     margin-top: 10rem;
     font-size: 36px;
 }
 
-.h1__menu-delice {
+.h2__menu-delice {
   font-family:$primary-font-delice;
   color: $medium-blue;
   font-size: 34px;
@@ -355,6 +448,14 @@ img {
     padding-top: 30px;
     }
   }
+.delice__subtitle {
+  background: linear-gradient(to top, $dark-blue 0%, $medium-blue 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 1000ms;
+    &:hover {
+      cursor: pointer;
+      background-size: 100% 100%;
+}
+}
 
 .delice__leftline {
   padding-right: 20px;
@@ -403,13 +504,13 @@ img {
 }
 }
 
-.h2__menu-palette {
+.h1__menu-palette {
     margin-top: 10rem;
     font-size: 34px;
     @include palette-title-degrade;
 }
 
-.h1__menu-palette {
+.h2__menu-palette {
   font-family:$secondary-font-palette;
   color: $dark-green;
   font-size: 30px;
@@ -430,10 +531,14 @@ img {
 }
 }
 
-.palette__subtitle--starter {
-  padding-left: 40px;
-  padding-right: 40px;
+.palette__subtitle {
+  background: linear-gradient(to top, $dark-green 0%, $dark-green 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 1000ms;
+    &:hover {
+      cursor: pointer;
+      background-size: 100% 100%;
       }
+    }
 
 .palette__leftline {
     padding-right: 25px;
