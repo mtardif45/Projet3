@@ -21,13 +21,6 @@
   align-items: center;
 }
 
-@mixin page-display {
-    width: 60%;
-    margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
 @mixin note-titlestyle {
   font-family: $primary-font-note;
   font-weight: lighter;
@@ -38,8 +31,8 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
 @mixin list-margin {
@@ -67,3 +60,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+@mixin tablet-only{
+  @media(max-width: map-get($breakpoints,tablet)){
+  @content}
+};
+
+@mixin mobile-only{
+  @media(max-width: map-get($breakpoints, mobile)) {
+    @content
+  }
+};
