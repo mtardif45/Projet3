@@ -9,6 +9,9 @@ body {
   margin: 0;
   font-family: 'Inter', Verdana, sans-serif;
 }
+main {
+  padding-bottom: 40px;
+}
 
 a {
 text-decoration: none;
@@ -101,7 +104,11 @@ header {
   background-color: $primary-color;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 40px;
   @include mobile-only {
     width: 100%;
   }
