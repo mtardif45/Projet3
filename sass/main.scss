@@ -10,7 +10,7 @@ body {
   font-family: 'Inter', Verdana, sans-serif;
 }
 main {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 a {
@@ -70,15 +70,15 @@ header {
   @include tablet-only {
   width: 40%;}
   @include mobile-only{
-    width: 60%;
+    width: 70%;
   }
     span {
     color: $secondary-color;
     z-index: 1;
     position: relative;
-    font-size: 28px;
-    @include mobile-only {
-      font-size: 18px;
+    font-size: 26px;
+      @include mobile-only {
+      font-size: 16px;
     }
         &::after {
         display: inline-block;
