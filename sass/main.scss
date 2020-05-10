@@ -196,10 +196,7 @@ header {
   }
 
 .note__main--subtitle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
+      @include subtitle-display;
       font-size: 24px;
       @include mobile-only {
         font-size: 16px;}
@@ -214,46 +211,28 @@ header {
   }
 
 .note__subtitle--starter {
-        padding-left: 50px;
-        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
-        @include mobile-only {
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-    &:hover {
-      cursor: pointer;
-      background-size: 100% 100%;
+        &:hover {
+          cursor: pointer;
+          background-size: 100% 100%;
       }
   }
 
 .note__subtitle--maincourse {
-        padding-left: 50px;
-        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
-        @include mobile-only {
-          padding-left: 5px;
-          padding-right: 5px;
-        }
         &:hover {
           cursor: pointer;
           background-size: 100% 100%;
           }
       }
 .note__subtitle--dessert {
-        padding-left: 50px;
-        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
-        @include mobile-only {
-          padding-left: 5px;
-          padding-right: 5px;
-        }
         &:hover {
-          cursor: pointer;
-          background-size: 100% 100%;
+        cursor: pointer;
+        background-size: 100% 100%;
           }
       }
 
@@ -324,14 +303,11 @@ padding: 0;
   }
 //menu 2 - page 2
 .chic__main--subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  @include subtitle-display;
   font-size: 14px;
   @include mobile-only {
     font-size: 10px;
-    text-align: center;}
+    }
       img {
         height: 8px;
         width: 30%;
@@ -356,9 +332,7 @@ padding: 0;
   }
 
 .chic__title {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
+  @include title-display;
   @include chic-title-degrade;
   font-size: 32px;
   @include mobile-only {
@@ -378,13 +352,6 @@ padding: 0;
   }
 }
 
-.chic__leftline--starter {
-  padding-right: 15px;
-}
-.chic__rightline--starter {
-      padding-left: 20px;
-    }
-
 .chic__maincourse {
   color: $purple;
   .chic__subtitle {
@@ -396,12 +363,7 @@ padding: 0;
         }
       }
     }
-.chic__leftline--maincourse {
-    padding-right: 40px;
-  }
-.chic__rightline--maincourse{
-    padding-left: 60px;
-  }
+
 
 .chic__dessert {
   color: $strongpurple;
@@ -414,13 +376,6 @@ padding: 0;
         }
       }
     }
-
-.chic__leftline--dessert {
-    padding-right: 25px;
-  }
-  .chic__rightline--dessert {
-    padding-left: 25px;
-  }
 
 .chic__liste {
   @include list-style;
@@ -464,10 +419,7 @@ padding: 0;
 
 //menu 3 page 3
 .delice__main--subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  @include subtitle-display;
   font-size: 14px;
   @include tablet-only {
     width: 100%;
@@ -490,13 +442,6 @@ padding: 0;
 }
 }
 
-.delice__leftline {
-  padding-right: 20px;
-}
-.delice__rightline {
-  padding-left: 20px;
-}
-
 .delice__main--menu {
     @include menu-shadow;
     background-color: $bg-delice;
@@ -512,10 +457,8 @@ padding: 0;
 }
 
 .delice__title {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  @include title-display
   @include delice-title-degrade;
-  text-align: center;
   font-size: 44px;
   @include mobile-only {
   font-size: 34px;
@@ -564,10 +507,7 @@ padding: 0;
 
 // menu 4 -page 4
 .palette__main--subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  @include subtitle-display;
   font-size: 14px;
   img {
     height: 8px;
@@ -588,13 +528,6 @@ padding: 0;
       }
     }
 
-.palette__leftline {
-    padding-right: 25px;
-  }
-.palette__rightline {
-    padding-left: 25px;
-  }
-
 .palette__main--menu {
     @include menu-shadow;
     width: 70%;
@@ -608,11 +541,9 @@ padding: 0;
 }
 
 .palette__title {
-   padding-top: 4rem;
-   padding-bottom: 4rem;
+   @include title-display;
    @include palette-title-degrade;
-   text-align: center;
-   font-size: 48px;
+    font-size: 48px;
    @include mobile-only {
      font-size: 30px;
    }
