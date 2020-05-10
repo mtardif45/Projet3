@@ -77,7 +77,7 @@ header {
     color: $secondary-color;
     z-index: 1;
     position: relative;
-    font-size: 24px;
+    font-size: 22px;
       @include tablet-only {
       font-size: 16px;}
       &::after {
