@@ -1,5 +1,8 @@
 @import "./utils/_mixins.scss";
 @import "./utils/_variables.scss";
+@import "./layout/_container.scss";
+@import "./layout/_header.scss";
+@import "./layout/_nav.scss";
 
 body {
   width: 100%;
@@ -69,33 +72,31 @@ header {
   @include tablet-only {
   width: 40%;}
   @include mobile-only{
-    width: 70%;
-  }
+    width: 70%;}
     span {
     color: $secondary-color;
     z-index: 1;
     position: relative;
-    font-size: 2px;
-      @include mobile-only {
-      font-size: 16px;
-    }
-        &::after {
+    font-size: 24px;
+      @include tablet-only {
+      font-size: 16px;}
+      &::after {
         display: inline-block;
         padding-left: 0.5rem;
         color: $secondary-color;
         z-index:-1;
         position: absolute;
         animation: dotty 2500ms backwards infinite ease-in-out;
-        content: '';
+        content: '';}
 }
 }
+
 @keyframes dotty {
-  0%   { content: ''; }
-  25%  { content: '.'; }
-  50%  { content: '..'; }
-  75%  { content: '...'; }
-  100% { content: ''; }
-}
+0%   { content: ''; }
+25%  { content: '.'; }
+50%  { content: '..'; }
+75%  { content: '...'; }
+100% { content: ''; }
 }
 
 //pied de page maintenu à chaque page
@@ -157,11 +158,11 @@ header {
   }
 }
   // menu 1 page 1
-.h2__menu-note {
+.h3__menu-note {
     font-family: $secondary-font-note;
     font-size: 26px;
     }
-.h1__menu-note {
+.h2__menu-note {
       @include note-titlestyle;
       font-size: 30px;
     }
@@ -195,8 +196,7 @@ header {
   }
 
 .note__main--subtitle {
-<<<<<<< HEAD
-      @include subtitle-display;
+      @include subtitle;
       font-size: 24px;
       @include mobile-only {
         font-size: 16px;}
@@ -205,23 +205,9 @@ header {
         width: 30%;
         @include tablet-only {
           width: 15%;
-          height: 5px;
-          }
-=======
-  @include subtitle-display;
-  font-size: 24px;
-  @include mobile-only {
-    font-size: 16px;}
-  img {
-    height: 8px;
-    width: 30%;
-    @include tablet-only {
-      width: 15%;
-      height: 5px;
-    }
->>>>>>> master
-    }
-  }
+          height: 5px;}
+        }
+}
 
 .note__subtitle--starter {
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
@@ -303,12 +289,12 @@ padding: 0;
 }
 }
 
-.h1__menu-chic {
+.h2__menu-chic {
     @include chic-title-degrade;
     font-size: 24px;
     margin-top: 10rem;
 }
-.h2__menu-chic {
+.h3__menu-chic {
     font-family: $primary-font-chic;
     color: $mustard;
     font-size: 30px;
@@ -316,7 +302,7 @@ padding: 0;
   }
 //menu 2 - page 2
 .chic__main--subtitle {
-  @include subtitle-display;
+  @include subtitle;
   font-size: 14px;
   @include mobile-only {
     font-size: 10px;
@@ -332,7 +318,6 @@ padding: 0;
       }
   }
 
-
 .chic__main--menu {
       @include menu-shadow;
       background: $bg-chic;
@@ -345,7 +330,7 @@ padding: 0;
   }
 
 .chic__title {
-  @include title-display;
+  @include title;
   @include chic-title-degrade;
   font-size: 32px;
   @include mobile-only {
@@ -376,10 +361,6 @@ padding: 0;
         }
       }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 
 .chic__dessert {
   color: $strongpurple;
@@ -420,13 +401,13 @@ padding: 0;
   }
 }
 
-.h1__menu-delice {
+.h2__menu-delice {
     @include delice-title-degrade;
     margin-top: 10rem;
     font-size: 30px;
 }
 
-.h2__menu-delice {
+.h3__menu-delice {
   font-family:$primary-font-delice;
   color: $medium-blue;
   font-size: 28px;
@@ -435,7 +416,7 @@ padding: 0;
 
 //menu 3 page 3
 .delice__main--subtitle {
-  @include subtitle-display;
+  @include subtitle;
   font-size: 14px;
   @include tablet-only {
     width: 100%;
@@ -473,11 +454,7 @@ padding: 0;
 }
 
 .delice__title {
-<<<<<<< HEAD
-  @include title-display
-=======
-  @include title-display;
->>>>>>> master
+  @include title;
   @include delice-title-degrade;
   font-size: 44px;
   @include mobile-only {
@@ -512,13 +489,13 @@ padding: 0;
 }
 }
 
-.h1__menu-palette {
+.h2__menu-palette {
     margin-top: 10rem;
     font-size: 30px;
     @include palette-title-degrade;
 }
 
-.h2__menu-palette {
+.h3__menu-palette {
   font-family:$secondary-font-palette;
   color: $dark-green;
   font-size: 26px;
@@ -527,7 +504,7 @@ padding: 0;
 
 // menu 4 -page 4
 .palette__main--subtitle {
-  @include subtitle-display;
+  @include subtitle;
   font-size: 14px;
   img {
     height: 8px;
@@ -561,13 +538,9 @@ padding: 0;
 }
 
 .palette__title {
-   @include title-display;
+   @include title;
    @include palette-title-degrade;
-<<<<<<< HEAD
-    font-size: 48px;
-=======
    font-size: 48px;
->>>>>>> master
    @include mobile-only {
      font-size: 30px;
    }
