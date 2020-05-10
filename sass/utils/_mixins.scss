@@ -40,6 +40,13 @@
   margin-bottom: 10px;
 }
 
+@mixin subtitle-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
 @mixin chic-title-degrade {
   font-family: $secondary-font-chic;
   background: linear-gradient(to right, $mustard 0%, $strongpurple 100%);
@@ -60,6 +67,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+@mixin title-display {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
 
 @mixin tablet-only{
   @media(max-width: map-get($breakpoints,tablet)){
