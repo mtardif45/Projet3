@@ -1,3 +1,4 @@
+@import "./base/_typography.scss";
 @import "./utils/_mixins.scss";
 @import "./utils/_variables.scss";
 
@@ -75,7 +76,7 @@ header {
     color: $secondary-color;
     z-index: 1;
     position: relative;
-    font-size: 2px;
+    font-size: 26px;
       @include mobile-only {
       font-size: 16px;
     }
@@ -132,7 +133,7 @@ header {
   100% {transform:rotate(0deg);}
 }
 
-// menu 1 preview
+// menu 1 //
 .menu-prev__note{
   @include menu1-layout;
   height: 100%;
@@ -195,21 +196,26 @@ header {
   }
 
 .note__main--subtitle {
-  @include subtitle-display;
-  font-size: 24px;
-  @include mobile-only {
-    font-size: 16px;}
-  img {
-    height: 8px;
-    width: 30%;
-    @include tablet-only {
-      width: 15%;
-      height: 5px;
-    }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      font-size: 24px;
+      @include mobile-only {
+        font-size: 16px;}
+      img {
+        height: 8px;
+        width: 30%;
+        @include tablet-only {
+          width: 15%;
+          height: 5px;
+          }
     }
   }
 
 .note__subtitle--starter {
+        padding-left: 50px;
+        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
         @include mobile-only {
@@ -223,6 +229,8 @@ header {
   }
 
 .note__subtitle--maincourse {
+        padding-left: 50px;
+        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
         @include mobile-only {
@@ -235,6 +243,8 @@ header {
           }
       }
 .note__subtitle--dessert {
+        padding-left: 50px;
+        padding-right: 50px;
         background: linear-gradient(to top, $color-note 0%, $color-note 5%, transparent 5.01%) no-repeat left bottom / 0 100%;
         transition: background-size 1000ms;
         @include mobile-only {
@@ -314,7 +324,10 @@ padding: 0;
   }
 //menu 2 - page 2
 .chic__main--subtitle {
-  @include subtitle-display;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   font-size: 14px;
   @include mobile-only {
     font-size: 10px;
@@ -330,6 +343,7 @@ padding: 0;
       }
   }
 
+
 .chic__main--menu {
       @include menu-shadow;
       background: $bg-chic;
@@ -342,7 +356,9 @@ padding: 0;
   }
 
 .chic__title {
-  @include title-display;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
   @include chic-title-degrade;
   font-size: 32px;
   @include mobile-only {
@@ -362,6 +378,13 @@ padding: 0;
   }
 }
 
+.chic__leftline--starter {
+  padding-right: 15px;
+}
+.chic__rightline--starter {
+      padding-left: 20px;
+    }
+
 .chic__maincourse {
   color: $purple;
   .chic__subtitle {
@@ -373,6 +396,12 @@ padding: 0;
         }
       }
     }
+.chic__leftline--maincourse {
+    padding-right: 40px;
+  }
+.chic__rightline--maincourse{
+    padding-left: 60px;
+  }
 
 .chic__dessert {
   color: $strongpurple;
@@ -385,6 +414,13 @@ padding: 0;
         }
       }
     }
+
+.chic__leftline--dessert {
+    padding-right: 25px;
+  }
+  .chic__rightline--dessert {
+    padding-left: 25px;
+  }
 
 .chic__liste {
   @include list-style;
@@ -428,7 +464,10 @@ padding: 0;
 
 //menu 3 page 3
 .delice__main--subtitle {
-  @include subtitle-display;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   font-size: 14px;
   @include tablet-only {
     width: 100%;
@@ -451,6 +490,13 @@ padding: 0;
 }
 }
 
+.delice__leftline {
+  padding-right: 20px;
+}
+.delice__rightline {
+  padding-left: 20px;
+}
+
 .delice__main--menu {
     @include menu-shadow;
     background-color: $bg-delice;
@@ -466,8 +512,10 @@ padding: 0;
 }
 
 .delice__title {
-  @include title-display;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   @include delice-title-degrade;
+  text-align: center;
   font-size: 44px;
   @include mobile-only {
   font-size: 34px;
@@ -516,7 +564,10 @@ padding: 0;
 
 // menu 4 -page 4
 .palette__main--subtitle {
-  @include subtitle-display;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   font-size: 14px;
   img {
     height: 8px;
@@ -537,6 +588,13 @@ padding: 0;
       }
     }
 
+.palette__leftline {
+    padding-right: 25px;
+  }
+.palette__rightline {
+    padding-left: 25px;
+  }
+
 .palette__main--menu {
     @include menu-shadow;
     width: 70%;
@@ -550,8 +608,10 @@ padding: 0;
 }
 
 .palette__title {
-   @include title-display;
+   padding-top: 4rem;
+   padding-bottom: 4rem;
    @include palette-title-degrade;
+   text-align: center;
    font-size: 48px;
    @include mobile-only {
      font-size: 30px;
