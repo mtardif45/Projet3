@@ -40,11 +40,14 @@
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 @mixin title-display {
   padding-top: 4rem;
   padding-bottom: 4rem;
   text-align: center;
 }
+=======
+>>>>>>> master
 
 @mixin subtitle-display {
   display: flex;
@@ -73,6 +76,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+@mixin title-display {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
 
 @mixin tablet-only{
   @media(max-width: map-get($breakpoints,tablet)){
